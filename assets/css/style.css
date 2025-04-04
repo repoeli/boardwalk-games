@@ -137,6 +137,19 @@ h2 {
     background-color: transparent;
 }
 
+/* Events  */
+
+.message-box {
+    background-color: #416a8e; 
+    color: #fff; 
+    padding: 5px 10px; /* padding */
+    width: 300px; /* fixed width */
+    margin: 20px auto; /* center horizontally */
+
+    text-align: center; /* ensure text is aligned */
+  }
+
+  
 /* grid visualisation CSS for testing */ 
 
 /* .container,
@@ -186,3 +199,21 @@ h2 {
     }
     
 }
+
+
+/* Styles for screens smaller than 768px (e.g., tablets, phones) */
+@media (max-width: 768px) {
+    .message-box {
+      width: 80%; /* adjust width */
+      font-size: 14px; /* optional adjustment for text size */
+      text-align: center; /* center-align text for smaller screens */
+    }
+  }
+  
+  /* Styles for screens smaller than 320px (e.g., phones) */
+  @media (max-width: 320px) {
+    .message-box {
+      width: 100%; /* further adjustment for very small screens */
+      padding: 10px 15px; /* increase padding for better readability */
+    }
+  }
