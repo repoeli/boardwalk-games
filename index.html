@@ -27,7 +27,7 @@
 <body class="d-flex flex-column min-vh-100">
 
     <!-- Navigation -->
-    <nav id="navbar" class="navbar sticky-top navbar-expand-lg" data-bs-theme="dark">
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
         <!--navbar-expand-lg responsible to expand the menue at large screen-->
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -251,7 +251,7 @@
                     <div class="col-auto justify-content-center message-box mt-0">
                         <span>*Get 20% off with valid student ID</span>
                     </div>
-                </div>                
+                </div>
             </div>
 
             <div class="row justify-content-center">
@@ -338,6 +338,28 @@
 
     <!-- Font Awesome kit -->
     <script src="https://kit.fontawesome.com/aa9af45995.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
+    <script>
+        document
+            .querySelectorAll(".navbar-collapse .nav-link")
+            .forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    let section = document.querySelector(e.target.getAttribute("href"));
+                    if (section) {
+                        e.preventDefault(); // Prevent default anchor click behavior
+                        let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+                        window.scroll({
+                            top: section.offsetTop - navbarHeight, // Adjust for navbar height
+                            behavior: "smooth",
+                        });
+                        document
+                            .querySelector(".navbar-collapse")
+                            .classList.remove("show"); // Collapse navbar
+                    }
+                });
+            });
+    </script>
 </body>
 
 </html>
