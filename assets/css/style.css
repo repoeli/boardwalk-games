@@ -133,6 +133,8 @@ h2 {
 
 #contact .social-links i:hover{
     color: var(--secondary-color);
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
     transition: color 0.3s ease-in-out;
 }
 
@@ -151,19 +153,6 @@ h2 {
 
     text-align: center; /* ensure text is aligned */
   }
-
-  
-/* grid visualisation CSS for testing */ 
-
-/* .container,
-.row {
-    border: 2px solid black;
-}
-
-.col-12 {
-    border: 2px solid white;
-    background-color: lightgrey;
-} */
 
 /* Media queries */
 
@@ -208,7 +197,7 @@ h2 {
 @media (max-width: 768px) {
     .message-box {
       width: 80%; /* adjust width */
-      font-size: 14px; /* optional adjustment for text size */
+      font-size: 14px; /* adjustment for text size */
       text-align: center; /* center-align text for smaller screens */
     }
   }
