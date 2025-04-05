@@ -41,9 +41,10 @@ h2 {
 }
 
 .section {
+
    /* margin-top: 2rem;
     margin-bottom: 2rem; */ /* By removing the marignins and adding the padding will fix the to maintaining the gaps between the sections and keep the heading of the sections visible */
-    padding-top: 4rem;
+    padding-top: 4rem; /* Adjust CSS to ensure navbar does not cover section headings when cliking internal links */
 }
 
 /* Buttons */
