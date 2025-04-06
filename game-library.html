@@ -68,6 +68,7 @@
                 <p class="my-4">Dive into a world of adventure, strategy, and fun with our carefully curated collection
                     of board games to rent or buy. From timeless classics to the latest sensations, our shelves are
                     packed with games waiting to be discovered.</p>
+                <a href="index.html#testimonials" class="btn custom-button-outline mb-4">Read Testimonials</a>
             </div>
             <div class="col-12 col-xl-6">
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -290,14 +291,15 @@
 
     <!-- footer / contact section -->
     <!-- mt-auto added to push footer to the bottom of the page -->
-    <footer id="contact" class="mt-auto">
+    <footer id="contact" class="mt-auto text-white pt-4">
         <div class="container section">
             <div class="row justify-content-center">
-                <div class="col-12 text-center">
+                <div class="col-12 text-center mb-4">
                     <h2 class="display-6">Contact us!</h2>
                 </div>
+
                 <!-- Contact info -->
-                <div class="col-12 col-md-6 col-xl-4">
+                <div class="col-12 col-md-6 col-xl-4 mb-4">
                     <h3 class="sub-heading-color">Contact info</h3>
                     <address>
                         <strong><i class="fa-solid fa-location-dot"></i> Boardwalk Games</strong><br>
@@ -309,19 +311,24 @@
                     </p>
                     <div class="social-links my-4">
                         <a href="https://www.instagram.com" target="_blank"
-                            aria-label="Visit our Instagram page (opens in a new tab)" rel="noopener"><i
-                                class="fa-brands fa-instagram"></i></a>
+                            aria-label="Visit our Instagram page (opens in a new tab)" rel="noopener"
+                            class="text-white me-3">
+                            <i class="fa-brands fa-instagram fa-lg"></i>
+                        </a>
                         <a href="https://www.facebook.com" target="_blank"
-                            aria-label="Visit our Facebook page (opens in a new tab)" rel="noopener"><i
-                                class="fa-brands fa-square-facebook"></i></a>
+                            aria-label="Visit our Facebook page (opens in a new tab)" rel="noopener"
+                            class="text-white me-3">
+                            <i class="fa-brands fa-square-facebook fa-lg"></i>
+                        </a>
                         <a href="https://www.x.com" target="_blank" aria-label="Visit our X feed (opens in a new tab)"
-                            rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+                            rel="noopener" class="text-white">
+                            <i class="fa-brands fa-x-twitter fa-lg"></i>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Opening times -->
-                <!-- Opening times -->
-                <div class="col-12 col-md-6 col-xl-4">
+                <div class="col-12 col-md-6 col-xl-4 mb-4">
                     <h3 class="sub-heading-color">Opening times</h3>
                     <table class="table table-dark">
                         <thead>
@@ -353,6 +360,45 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
+
+                <!-- Newsletter Sign-up -->
+                <div class="col-12 col-md-6 col-xl-4 mb-4">
+                    <h3 class="sub-heading-color">
+                        Stay Updated
+                    </h3>
+                    <div class="newsletter-card p-4 rounded">
+
+                        <p class="text-muted">Get exclusive offers, new game alerts, and event invites!</p>
+
+                        <form action="success.html" method="GET">
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text bg-primary text-white">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                <input type="email" class="form-control" name="email" placeholder="Your email address"
+                                    required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please provide a valid email address.
+                            </div>
+
+                            <div class="form-text text-muted small">
+                                We'll never share your email. Unsubscribe anytime.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col-12 text-center py-3 border-top border-secondary">
+                    <small class="text-muted">© 2025 Boardwalk Games. All rights reserved.</small>
                 </div>
             </div>
         </div>

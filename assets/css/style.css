@@ -3,20 +3,22 @@
 
 /* CSS Variables */
 :root {
-    --primary-font : "Inter", sans-serif;
-    --secondary-font : "Macondo", cursive;
-    --primary-color : #3a2620; /* dark brown */
+    --primary-font: "Inter", sans-serif;
+    --secondary-font: "Macondo", cursive;
+    --primary-color: #3a2620;
+    /* dark brown */
 
     --secondary-color: #aa9581;
-    --highlight-color : #416a8e;
-    --light-highlight-color : #7a9fc2;
+    --highlight-color: #416a8e;
+    --light-highlight-color: #7a9fc2;
 }
 
 /* Global styles */
 
 body {
     font-family: var(--primary-font);
-    padding-top: 57.15px; /* pushes the top of the header down under fixed navbar */
+    padding-top: 57.15px;
+    /* pushes the top of the header down under fixed navbar */
 }
 
 h1,
@@ -28,7 +30,7 @@ h3 {
 
 h1,
 h2 {
-    
+
     text-transform: uppercase;
 }
 
@@ -43,9 +45,11 @@ h2 {
 
 .section {
 
-   /* margin-top: 2rem;
-    margin-bottom: 2rem; */ /* By removing the marignins and adding the padding will fix the to maintaining the gaps between the sections and keep the heading of the sections visible */
-    padding-top: 4rem; /* Adjust CSS to ensure navbar does not cover section headings when cliking internal links */
+    /* margin-top: 2rem;
+    margin-bottom: 2rem; */
+    /* By removing the marignins and adding the padding will fix the to maintaining the gaps between the sections and keep the heading of the sections visible */
+    padding-top: 4rem;
+    /* Adjust CSS to ensure navbar does not cover section headings when cliking internal links */
 }
 
 /* Buttons */
@@ -82,12 +86,12 @@ h2 {
     background-color: var(--primary-color);
 }
 
-#navbar .logo{
+#navbar .logo {
     width: 30px;
 }
 
 /* Header */
-#header .lead{
+#header .lead {
     font-family: var(--secondary-font);
 }
 
@@ -117,11 +121,11 @@ h2 {
     padding-bottom: 3rem;
 }
 
-#contact h2{
+#contact h2 {
     color: white;
 }
 
-#contact .sub-heading-color{
+#contact .sub-heading-color {
     color: var(--light-highlight-color);
 }
 
@@ -131,86 +135,207 @@ h2 {
     margin-right: 15px;
 }
 
-#contact .social-links i{
+#contact .social-links i {
     color: var(--light-highlight-color);
     font-size: 1.9rem;
 }
 
-#contact .social-links i:hover{
+#contact .social-links i:hover {
     color: var(--secondary-color);
     -webkit-transition: color 0.3s ease-in-out;
     -o-transition: color 0.3s ease-in-out;
     transition: color 0.3s ease-in-out;
 }
 
-#contact .table-dark *{
+#contact .table-dark * {
+    background-color: transparent;
+}
+
+#newsletter-form {
     background-color: transparent;
 }
 
 /* Events  */
 
 .message-box {
-    background-color: #416a8e; 
-    color: #fff; 
-    padding: 5px 10px; /* padding */
-    width: 300px; /* fixed width */
-    margin: 20px auto; /* center horizontally */
+    background-color: #416a8e;
+    color: #fff;
+    padding: 5px 10px;
+    /* padding */
+    width: 300px;
+    /* fixed width */
+    margin: 20px auto;
+    /* center horizontally */
 
-    text-align: center; /* ensure text is aligned */
-  }
+    text-align: center;
+    /* ensure text is aligned */
+}
+
+
+/* Testimonials Section */
+#testimonials {
+    overflow: hidden;
+}
+
+/* Show arrows on hover */
+.container:hover .scroll-btn {
+    opacity: 1 !important;
+}
+
+/* Testimonials Wrapper */
+.testimonial-wrapper {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.testimonial-wrapper:active {
+    cursor: grabbing;
+}
+
+.testimonial-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Improved Auto-scroll animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-26.8628%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+}
+
+/* Pause animation on hover */
+.testimonial-wrapper:hover .testimonial-inner {
+    animation-play-state: paused;
+}
+
+/* Arrow Buttons - Better positioning */
+.scroll-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+    .scroll-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Card styling with better responsive margins */
+#testimonials .card {
+    border: none;
+    border-radius: 10px;
+    width: 280px;
+    flex-shrink: 0;
+}
+
+/* Radio button navigation */
+#testimonial-slide-left:checked~.testimonial-wrapper .testimonial-inner {
+    animation: none;
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+}
+
+#testimonial-slide-right:checked~.testimonial-wrapper .testimonial-inner {
+    animation: none;
+    transform: translateX(-50%);
+    transition: transform 0.5s ease;
+}
+
+
+.text-muted {
+    --bs-text-opacity: 1;
+    color: #ffffff !important; /* Replace with your desired color */
+}
+
+
 
 /* Media queries */
 
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
+
     /* Make all service cards the same height for consistency */
     #services .card-body {
         min-height: 191px;
     }
-    
+
 }
 
 /* Medium devices (tablets, 992px and up) */
 @media screen and (min-width: 992px) {
+
     /* Make all service cards the same height for consistency */
     #services .card-body {
         min-height: auto;
     }
-    
+
 }
 
 /* Medium devices (large desktop, 1200px and up) */
 @media screen and (min-width: 1200px) {
+
     /* Make all service cards the same height for consistency */
     #services .card-body {
         min-height: 220px;
     }
-    
+
 }
 
 /* Medium devices (large desktop, 1400px and up) */
 @media screen and (min-width: 1400px) {
+
     /* Make all service cards the same height for consistency */
     #services .card-body {
         min-height: 195px;
     }
-    
+
 }
 
 
 /* Styles for screens smaller than 768px (e.g., tablets, phones) */
 @media (max-width: 768px) {
     .message-box {
-      width: 80%; /* adjust width */
-      font-size: 14px; /* adjustment for text size */
-      text-align: center; /* center-align text for smaller screens */
+        width: 80%;
+        /* adjust width */
+        font-size: 14px;
+        /* adjustment for text size */
+        text-align: center;
+        /* center-align text for smaller screens */
     }
-  }
-  
-  /* Styles for screens smaller than 320px (e.g., phones) */
-  @media (max-width: 320px) {
+}
+
+/* Styles for screens smaller than 320px (e.g., phones) */
+@media (max-width: 320px) {
     .message-box {
-      width: 100%; /* further adjustment for very small screens */
-      padding: 10px 15px; /* increase padding for better readability */
+        width: 100%;
+        /* further adjustment for very small screens */
+        padding: 10px 15px;
+        /* increase padding for better readability */
     }
-  }
+}
